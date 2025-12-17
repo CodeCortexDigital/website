@@ -1,0 +1,390 @@
+/* ================================
+   CODE CORTEX – MASTER THEME
+   Extracted from reference page
+   DO NOT MODIFY COLORS / SPACING
+================================ */
+
+/* ---------- ROOT VARIABLES ---------- */
+:root {
+  --bg: #1c1e26;
+  --panel: #2f3243;
+  --accent: #ffe27d;
+  --muted: #ccc;
+  --cta: #ff6b6b;
+  --text-primary: #ffffff;
+  --shadow: 0 4px 20px rgba(0,0,0,0.4);
+  --maintenance-primary: #00cc88;
+
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --secondary: #7c3aed;
+
+  --success: #10b981;
+  --error: #ef4444;
+}
+
+/* ---------- LIGHT THEME ---------- */
+[data-theme="light"] {
+  --bg: #ffffff;
+  --panel: #f5f5f7;
+  --accent: #ffb84d;
+  --muted: #333;
+  --cta: #ff4b4b;
+  --text-primary: #000000;
+  --shadow: 0 4px 20px rgba(0,0,0,0.1);
+  --maintenance-primary: #00a86b;
+}
+
+/* ---------- RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- BASE ---------- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--muted);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ---------- CONTAINER ---------- */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+/* ---------- SKIP LINK ---------- */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  background: var(--cta);
+  color: #fff;
+  padding: 8px 12px;
+  z-index: 999;
+  border-radius: 5px;
+}
+.skip-link:focus { top: 10px; }
+
+/* ---------- HEADER ---------- */
+header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  background: rgba(43, 46, 61, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: var(--shadow);
+  transition: transform .3s ease;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  transition: transform .3s ease;
+}
+.logo-img:hover {
+  transform: rotate(5deg) scale(1.05);
+}
+
+.header-left h1 {
+  color: var(--text-primary);
+  font-size: 1.5rem;
+}
+
+/* ---------- NAV ---------- */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+}
+
+.main-nav a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 6px;
+  position: relative;
+  transition: .3s;
+}
+.main-nav a:hover {
+  background: rgba(255,255,255,.1);
+  color: var(--accent);
+}
+.main-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transform: translateX(-50%);
+  transition: .3s;
+}
+.main-nav a:hover::after { width: 80%; }
+
+/* ---------- NAV TOGGLE ---------- */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+}
+
+/* ---------- BUTTONS ---------- */
+.btn {
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: .3s;
+}
+.btn-primary {
+  background: var(--cta);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #ff4b4b;
+  transform: translateY(-3px);
+}
+.btn-secondary {
+  border: 2px solid var(--accent);
+  color: var(--text-primary);
+}
+.btn-secondary:hover {
+  background: var(--accent);
+  color: #000;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  min-height: 100vh;
+  padding: 8rem 2rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, var(--bg), #2b2e3d);
+}
+.hero h2 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  background: linear-gradient(90deg, var(--accent), var(--cta));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero p {
+  max-width: 600px;
+  margin: 1.5rem auto 2.5rem;
+}
+
+/* ---------- SECTIONS ---------- */
+section {
+  padding: 5rem 2rem;
+}
+section:nth-child(even) {
+  background: var(--panel);
+}
+h2 {
+  color: var(--accent);
+  margin-bottom: 3rem;
+  position: relative;
+}
+h2::after {
+  content: '';
+  width: 60px;
+  height: 3px;
+  background: var(--cta);
+  display: block;
+  margin: 10px auto 0;
+}
+
+/* ---------- CARDS ---------- */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+.card {
+  background: var(--panel);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  transition: .3s;
+}
+.card:hover {
+  transform: translateY(-10px);
+}
+.card i {
+  font-size: 3rem;
+  color: var(--cta);
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: #2b2e3d;
+  padding: 3rem 2rem;
+  color: #aaa;
+}
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 40px;
+}
+.footer-links a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.footer-links a:hover {
+  color: var(--accent);
+}
+.footer-bottom {
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,.1);
+  padding-top: 1rem;
+  text-align: center;
+}
+
+/* ---------- FLOATING BUTTONS ---------- */
+.float-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 200;
+}
+.float-btn a {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--cta);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.whatsapp { background: #25D366; }
+
+/* ---------- THEME TOGGLE ---------- */
+#themeToggle {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+
+/* ---------- MOBILE ---------- */
+@media(max-width:800px){
+  .nav-toggle { display:block; }
+  .nav-links {
+    display:none;
+    flex-direction: column;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background: rgba(43,46,61,.98);
+    padding: 1.5rem;
+  }
+  .nav-links.show { display:flex; }
+}
+/* ================================
+   CAREERS CTA – MOBILE FIRST
+================================ */
+
+.final-cta {
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+.final-cta h2 {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  margin-bottom: 1rem;
+}
+
+.final-cta p {
+  font-size: 1rem;
+  max-width: 500px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+/* Apply Now Button */
+.btn-large {
+  display: inline-block;
+  width: 100%;
+  max-width: 320px;
+  padding: 16px 24px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  text-align: center;
+}
+
+/* Mobile specific */
+@media (max-width: 600px) {
+  .final-cta {
+    padding: 3rem 1rem;
+  }
+
+  .final-cta h2 {
+    font-size: 1.4rem;
+  }
+
+  .final-cta p {
+    font-size: 0.95rem;
+  }
+
+  .btn-large {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
