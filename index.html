@@ -82,7 +82,7 @@
       --secondary: #7c3aed;
       --success: #10b981;
       --error: #ef4444;
-      --hiring: #10b981;
+      --careers: #2563eb;
     }
     
     [data-theme="light"] {
@@ -96,7 +96,7 @@
       --maintenance-primary: #00a86b;
       --success: #10b981;
       --error: #ef4444;
-      --hiring: #0d9c6d;
+      --careers: #2563eb;
     }
 
     * { 
@@ -238,15 +238,15 @@
       gap: 10px;
     }
 
-    /* Hiring Button - Updated for mobile */
-    .hiring-btn { 
+    /* Careers Button */
+    .careers-btn { 
       border: none; 
       padding: 10px 20px; 
       border-radius: 8px; 
       cursor: pointer; 
       font-weight: 600; 
       font-size: 0.9rem; 
-      background: var(--hiring); 
+      background: var(--careers); 
       color: #fff; 
       white-space: nowrap;
       transition: all 0.3s ease;
@@ -254,13 +254,12 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      animation: pulse 2s infinite;
-      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+      box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
       position: relative;
       overflow: hidden;
     }
     
-    .hiring-btn::before {
+    .careers-btn::before {
       content: '';
       position: absolute;
       top: 0;
@@ -271,28 +270,15 @@
       transition: 0.5s;
     }
     
-    .hiring-btn:hover::before {
+    .careers-btn:hover::before {
       left: 100%;
     }
     
-    .hiring-btn:hover,
-    .hiring-btn:focus { 
-      background-color: #0d9c6d; 
+    .careers-btn:hover,
+    .careers-btn:focus { 
+      background-color: var(--primary-dark); 
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.6);
-      animation: none;
-    }
-
-    @keyframes pulse {
-      0% {
-        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
-      }
-      70% {
-        box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
-      }
-      100% {
-        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
-      }
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
     }
 
     .get-in-touch-btn { 
@@ -376,25 +362,9 @@
         margin-left: auto;
       }
       
-      .hiring-btn, .get-in-touch-btn {
+      .careers-btn, .get-in-touch-btn {
         padding: 8px 16px;
         font-size: 0.8rem;
-      }
-      
-      .hiring-btn {
-        animation: mobilePulse 2s infinite;
-      }
-      
-      @keyframes mobilePulse {
-        0% {
-          box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
-        }
-        70% {
-          box-shadow: 0 0 0 5px rgba(16, 185, 129, 0);
-        }
-        100% {
-          box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
-        }
       }
     }
 
@@ -404,7 +374,7 @@
         gap: 5px;
       }
       
-      .hiring-btn, .get-in-touch-btn {
+      .careers-btn, .get-in-touch-btn {
         padding: 6px 12px;
         font-size: 0.75rem;
       }
@@ -907,10 +877,6 @@
       html {
         scroll-behavior: auto;
       }
-      
-      .hiring-btn {
-        animation: none;
-      }
     }
 
     /* Admin Login Modal Styles */
@@ -1081,9 +1047,8 @@
     </nav>
     
     <div class="header-buttons">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeYw-6YvtassUB25LDLMt-U46SUaja9cXEtpqvt92DKxp2RIw/viewform?usp=publish-editor" 
-         target="_blank" class="hiring-btn">
-        We're Hiring
+      <a href="careers.html" class="careers-btn">
+        Careers
       </a>
       <button class="get-in-touch-btn" onclick="window.location.href='#contact'" aria-label="Get in touch with Code Cortex">
         Get in Touch
@@ -1539,4 +1504,3 @@
   </script>
 </body>
 </html>
-
