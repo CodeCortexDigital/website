@@ -1,751 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Primary Meta Tags -->
-  <title>Contact Code Cortex | Get in Touch - Software House Pakistan</title>
-  <meta name="description" content="Contact Code Cortex for web development, mobile apps, AI solutions, and IT services in Pakistan. Get a free consultation for your project.">
-  <meta name="keywords" content="contact software house Pakistan, web development contact, IT services contact Pakistan, get project quote, software consultation">
-  <meta name="author" content="Code Cortex (SMC-Pvt.) Ltd.">
-  <link rel="canonical" href="https://codecortexdigital.github.io/com/contact.html">
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Contact Us | Code Cortex</title>
+  <meta name="description" content="Contact Code Cortex for web development, mobile apps, AI solutions, and ongoing support. Get a free consultation today." />
+  <meta name="keywords" content="contact Code Cortex, software house contact, web development contact, IT services Pakistan" />
+  <meta name="author" content="Code Cortex (Pvt.) Ltd." />
+  <meta name="robots" content="index, follow" />
+
   <!-- Open Graph -->
-  <meta property="og:title" content="Contact Code Cortex | Get in Touch - Software House Pakistan">
-  <meta property="og:description" content="Get in touch with our team for web development, mobile apps, AI solutions, and IT services. Free consultation available.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://codecortexdigital.github.io/com/contact.html">
-  <meta property="og:image" content="https://codecortexdigital.github.io/com/code_logo.png">
-  
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Contact Code Cortex | Software House Pakistan">
-  <meta name="twitter:description" content="Get in touch for software development services and project consultations.">
-  
-  <!-- Load CSS Files -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-  <link rel="stylesheet" href="style.css">
-  
+  <meta property="og:title" content="Contact Code Cortex" />
+  <meta property="og:description" content="Get in touch with Code Cortex for your next digital project." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/code_logo.png" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
   <!-- Favicon -->
-  <link rel="icon" href="code_logo.png" type="image/x-icon">
-  <link rel="apple-touch-icon" href="code_logo.png">
-  
-  <!-- JSON-LD Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "name": "Contact Code Cortex",
-    "description": "Contact page for Code Cortex software house in Pakistan",
-    "mainEntity": {
-      "@type": "Organization",
-      "name": "Code Cortex (SMC-Pvt.) Ltd.",
-      "contactPoint": [{
-        "@type": "ContactPoint",
-        "telephone": "+92-315-722-7688",
-        "contactType": "customer service",
-        "email": "info@codecortexdigital.com",
-        "areaServed": "PK",
-        "availableLanguage": ["English", "Urdu"],
-        "contactOption": "TollFree",
-        "hoursAvailable": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-          "opens": "09:00",
-          "closes": "18:00"
-        }
-      }]
-    }
-  }
-  </script>
-
-  <style>
-    /* Contact-specific styles */
-    .contact-hero {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      min-height: 80vh;
-      background: linear-gradient(135deg, var(--bg) 0%, #1a1c23 100%);
-      position: relative;
-      padding: 0 2rem;
-      margin-top: 80px;
-      overflow: hidden;
-    }
-    
-    .contact-hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: 
-        radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
-      animation: pulse 8s ease-in-out infinite;
-    }
-    
-    .contact-hero h1 {
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      background: linear-gradient(90deg, var(--contact-primary), var(--contact-secondary));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 1.5rem;
-      line-height: 1.2;
-      position: relative;
-      z-index: 2;
-    }
-    
-    .contact-hero p {
-      font-size: clamp(1.1rem, 2vw, 1.3rem);
-      color: var(--muted);
-      margin-bottom: 2.5rem;
-      max-width: 700px;
-      position: relative;
-      z-index: 2;
-    }
-    
-    .contact-channels {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-top: 2rem;
-      position: relative;
-      z-index: 2;
-    }
-    
-    .contact-channel {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-      padding: 1rem 1.5rem;
-      border-radius: 12px;
-      border: 1px solid rgba(139, 92, 246, 0.2);
-      font-weight: 600;
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    
-    .contact-channel:hover {
-      transform: translateY(-3px);
-      background: rgba(139, 92, 246, 0.1);
-      border-color: var(--contact-primary);
-    }
-
-    /* Contact Methods Grid */
-    .contact-methods {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    
-    .method-card {
-      background: var(--panel);
-      padding: 2.5rem 2rem;
-      border-radius: 15px;
-      transition: all 0.3s ease;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      position: relative;
-      overflow: hidden;
-      text-align: center;
-    }
-    
-    .method-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, var(--contact-primary), var(--contact-secondary));
-      transform: scaleX(0);
-      transition: transform 0.3s ease;
-    }
-    
-    .method-card:hover::before {
-      transform: scaleX(1);
-    }
-    
-    .method-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-    }
-    
-    .method-card i {
-      font-size: 3rem;
-      color: var(--contact-primary);
-      margin-bottom: 1.5rem;
-      transition: all 0.3s ease;
-    }
-    
-    .method-card:hover i {
-      transform: scale(1.2) rotate(5deg);
-      color: var(--contact-secondary);
-    }
-    
-    .contact-btn {
-      display: inline-block;
-      margin-top: 1.5rem;
-      padding: 12px 30px;
-      background: var(--contact-primary);
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      border: none;
-      cursor: pointer;
-    }
-    
-    .contact-btn:hover {
-      background: var(--contact-secondary);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
-    }
-    
-    .contact-btn.whatsapp {
-      background: #25D366;
-    }
-    
-    .contact-btn.whatsapp:hover {
-      background: #1da851;
-    }
-    
-    .contact-btn.email {
-      background: var(--contact-primary);
-    }
-    
-    .contact-btn.phone {
-      background: var(--contact-secondary);
-    }
-
-    /* Contact Form */
-    .contact-form-container {
-      max-width: 800px;
-      margin: 0 auto;
-      background: var(--panel);
-      padding: 3rem;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-      text-align: left;
-    }
-    
-    .form-group {
-      margin-bottom: 2rem;
-    }
-    
-    .form-group label {
-      display: block;
-      margin-bottom: 0.5rem;
-      color: var(--accent);
-      font-weight: 600;
-    }
-    
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 12px 15px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 8px;
-      color: var(--text-primary);
-      font-size: 1rem;
-      transition: all 0.3s ease;
-    }
-    
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: var(--contact-primary);
-      box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
-    }
-    
-    .form-group textarea {
-      min-height: 150px;
-      resize: vertical;
-    }
-    
-    .submit-btn {
-      width: 100%;
-      padding: 15px;
-      background: linear-gradient(90deg, var(--contact-primary), var(--contact-secondary));
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 1.1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-    
-    .submit-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
-    }
-
-    /* Quick Info */
-    .quick-info {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      max-width: 1200px;
-      margin: 3rem auto 0;
-      padding: 2rem;
-      background: var(--panel);
-      border-radius: 15px;
-    }
-    
-    .info-item {
-      text-align: center;
-      padding: 1.5rem;
-    }
-    
-    .info-item i {
-      font-size: 2rem;
-      color: var(--contact-primary);
-      margin-bottom: 1rem;
-    }
-
-    /* FAQ Section */
-    .faq-container {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    
-    .faq-item {
-      background: var(--panel);
-      margin-bottom: 1rem;
-      border-radius: 10px;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .faq-question {
-      padding: 1.5rem;
-      font-weight: 600;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      transition: all 0.3s ease;
-    }
-    
-    .faq-question:hover {
-      background: rgba(255, 255, 255, 0.05);
-    }
-    
-    .faq-answer {
-      padding: 0 1.5rem;
-      max-height: 0;
-      overflow: hidden;
-      transition: all 0.3s ease;
-    }
-    
-    .faq-item.active .faq-answer {
-      padding: 0 1.5rem 1.5rem;
-      max-height: 500px;
-    }
-    
-    .faq-item.active .faq-question i {
-      transform: rotate(180deg);
-    }
-
-    /* CTA Section */
-    .contact-cta {
-      background: linear-gradient(135deg, var(--contact-primary) 0%, var(--contact-secondary) 100%);
-      color: white;
-      padding: 4rem 2rem;
-      border-radius: 20px;
-      margin: 2rem auto;
-      max-width: 800px;
-    }
-    
-    .contact-cta h3 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-  </style>
+  <link rel="icon" href="assets/code_logo.png" />
 </head>
+
 <body data-theme="dark">
 
+  <!-- Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- Header -->
-  <header>
-    <div class="header-left">
-      <a href="index.html" class="logo-link" aria-label="Code Cortex - Return to home page">
-        <img src="code_logo.png" alt="Code Cortex - Contact Us" class="logo-img" width="55" height="55" />
-        <h1>Code Cortex</h1>
+  <div id="site-header"></div>
+
+  <!-- Main -->
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero small-hero" data-aos="fade-up">
+      <h2>Contact Us</h2>
+      <p>
+        Let’s discuss your idea and turn it into a powerful digital solution.
+      </p>
+    </section>
+
+    <!-- CONTACT OPTIONS -->
+    <section data-aos="fade-up">
+      <h2>Get in Touch</h2>
+
+      <div class="cards-container">
+
+        <div class="card">
+          <i class="fas fa-envelope"></i>
+          <h3>Email Us</h3>
+          <p>
+            Send us your project requirements and get a personalized response.
+          </p>
+          <a
+            href="mailto:info@codecortexdigital.com?subject=Project Inquiry - Code Cortex"
+            class="btn btn-primary"
+          >
+            Send Email
+          </a>
+        </div>
+
+        <div class="card">
+          <i class="fab fa-whatsapp"></i>
+          <h3>WhatsApp</h3>
+          <p>
+            Chat with us directly for quick questions and instant responses.
+          </p>
+          <a
+            href="https://wa.me/923157227688"
+            target="_blank"
+            class="btn btn-primary"
+          >
+            Message on WhatsApp
+          </a>
+        </div>
+
+        <div class="card">
+          <i class="fas fa-phone"></i>
+          <h3>Call Us</h3>
+          <p>
+            Speak directly with our team for detailed discussions.
+          </p>
+          <a href="tel:+923157227688" class="btn btn-primary">
+            Call Now
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT DETAILS -->
+    <section data-aos="fade-up">
+      <h2>Contact Information</h2>
+
+      <div class="cards-container">
+
+        <div class="card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>Location</h3>
+          <p>Attock, Punjab, Pakistan</p>
+        </div>
+
+        <div class="card">
+          <i class="fas fa-clock"></i>
+          <h3>Working Hours</h3>
+          <p>Monday – Saturday<br />9:00 AM – 6:00 PM</p>
+        </div>
+
+        <div class="card">
+          <i class="fas fa-globe"></i>
+          <h3>Serving Globally</h3>
+          <p>USA • UAE • Pakistan</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="final-cta" data-aos="fade-up">
+      <h2>Ready to Start Your Project?</h2>
+      <p>Get a free consultation with our technical team.</p>
+
+      <a href="mailto:info@codecortexdigital.com" class="btn-large">
+        Get Free Consultation
       </a>
-    </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="about.html">About</a>
-      <a href="careers.html">Careers</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
 
-  <!-- Hero Section -->
-  <section class="contact-hero">
-    <h1 class="fade-in">Get in Touch</h1>
-    <p class="fade-in">Ready to start your project? Contact us directly for the fastest response and guaranteed communication.</p>
-    
-    <div class="contact-channels fade-in">
-      <div class="contact-channel">
-        <i class="fab fa-whatsapp"></i>
-        <span>WhatsApp: +92-315-722-7688</span>
-      </div>
-      <div class="contact-channel">
-        <i class="fas fa-phone"></i>
-        <span>Call: +92-315-722-7688</span>
-      </div>
-      <div class="contact-channel">
-        <i class="fas fa-envelope"></i>
-        <span>Email: info@codecortexdigital.com</span>
-      </div>
-    </div>
-  </section>
+      <p class="small-text">
+        Or email us directly at <strong>info@codecortexdigital.com</strong>
+      </p>
+    </section>
 
-  <!-- Contact Methods -->
-  <section id="contact-methods">
-    <h2>Contact Us Directly</h2>
-    <div class="contact-methods">
-      <div class="method-card" data-aos="fade-up">
-        <i class="fab fa-whatsapp"></i>
-        <h3>WhatsApp</h3>
-        <p>Chat with us directly for quick questions, instant quotes, and fast responses.</p>
-        <p><strong>Response Time:</strong> Within minutes</p>
-        <a href="https://wa.me/923157227688?text=Hello%20Code%20Cortex!%20I'm%20interested%20in%20your%20services.%20Please%20share%20more%20information." 
-           target="_blank" class="contact-btn whatsapp">
-          Message on WhatsApp
-        </a>
-      </div>
-      
-      <div class="method-card" data-aos="fade-up" data-aos-delay="100">
-        <i class="fas fa-envelope"></i>
-        <h3>Email Us</h3>
-        <p>Send detailed project requirements and get a personalized quote within 24 hours.</p>
-        <p><strong>Response Time:</strong> Within 24 hours</p>
-        <a href="mailto:info@codecortexdigital.com?subject=Project Inquiry - Code Cortex&body=Hello Code Cortex Team,%0D%0A%0D%0AI'm interested in your services. Here are my project details:%0D%0A%0D%0A- Project Type:%0D%0A- Budget Range:%0D%0A- Timeline:%0D%0A- Description:%0D%0A%0D%0APlease contact me to discuss further.%0D%0A%0D%0ABest regards," 
-           class="contact-btn email">
-          Send Email
-        </a>
-      </div>
-      
-      <div class="method-card" data-aos="fade-up" data-aos-delay="200">
-        <i class="fas fa-phone"></i>
-        <h3>Call Us</h3>
-        <p>Speak directly with our team for detailed discussions and immediate assistance.</p>
-        <p><strong>Response Time:</strong> Instant</p>
-        <a href="tel:+923157227688" class="contact-btn phone">
-          Call Now
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Form -->
-  <section style="background: var(--panel);">
-    <h2>Or Send Us a Message</h2>
-    <div class="contact-form-container" data-aos="fade-up">
-      <form id="contactForm">
-        <div class="form-group">
-          <label for="name">Full Name *</label>
-          <input type="text" id="name" name="name" required placeholder="Your name">
-        </div>
-        
-        <div class="form-group">
-          <label for="email">Email Address *</label>
-          <input type="email" id="email" name="email" required placeholder="your@email.com">
-        </div>
-        
-        <div class="form-group">
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" placeholder="+92 XXX XXXXXXX">
-        </div>
-        
-        <div class="form-group">
-          <label for="service">Service Interested In *</label>
-          <select id="service" name="service" required>
-            <option value="">Select a service</option>
-            <option value="web-development">Web Development</option>
-            <option value="mobile-app">Mobile App Development</option>
-            <option value="ai-solutions">AI Solutions</option>
-            <option value="maintenance">Maintenance & Support</option>
-            <option value="multiple">Multiple Services</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-        
-        <div class="form-group">
-          <label for="message">Project Details *</label>
-          <textarea id="message" name="message" required placeholder="Describe your project requirements, goals, and any specific details..."></textarea>
-        </div>
-        
-        <button type="submit" class="submit-btn">Send Message</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Quick Info -->
-  <section>
-    <h2>Quick Information</h2>
-    <div class="quick-info">
-      <div class="info-item" data-aos="fade-up">
-        <i class="fas fa-map-marker-alt"></i>
-        <h3>Our Location</h3>
-        <p>Attock, Punjab, Pakistan</p>
-        <p style="font-size: 0.9rem; color: var(--muted);">Serving clients worldwide</p>
-      </div>
-      
-      <div class="info-item" data-aos="fade-up" data-aos-delay="100">
-        <i class="fas fa-clock"></i>
-        <h3>Business Hours</h3>
-        <p>Monday - Saturday</p>
-        <p>9:00 AM - 6:00 PM PKT</p>
-      </div>
-      
-      <div class="info-item" data-aos="fade-up" data-aos-delay="200">
-        <i class="fas fa-headset"></i>
-        <h3>Support</h3>
-        <p>24/7 Technical Support</p>
-        <p>Emergency response available</p>
-      </div>
-      
-      <div class="info-item" data-aos="fade-up" data-aos-delay="300">
-        <i class="fas fa-globe"></i>
-        <h3>Timezone</h3>
-        <p>Pakistan Standard Time</p>
-        <p>(UTC+5)</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section style="background: var(--panel);">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-container">
-      <div class="faq-item" data-aos="fade-up">
-        <div class="faq-question">
-          <span>What is your typical response time?</span>
-          <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-          <p>WhatsApp messages: Within minutes during business hours<br>
-          Email inquiries: Within 24 hours<br>
-          Phone calls: Instant during business hours (9AM-6PM PKT)<br>
-          We prioritize direct communication channels for fastest response.</p>
-        </div>
-      </div>
-      
-      <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
-        <div class="faq-question">
-          <span>Do you offer free consultations?</span>
-          <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-          <p>Yes! We offer free initial consultations for all projects. During the consultation, we'll discuss your requirements, provide initial recommendations, and give you a ballpark estimate. There's no obligation to proceed after the consultation.</p>
-        </div>
-      </div>
-      
-      <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
-        <div class="faq-question">
-          <span>What information should I provide for a quote?</span>
-          <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-          <p>For the most accurate quote, please provide:<br>
-          1. Project type (website, mobile app, etc.)<br>
-          2. Key features and functionality needed<br>
-          3. Target audience and platform requirements<br>
-          4. Timeline expectations<br>
-          5. Budget range if available<br>
-          6. Any existing designs or references</p>
-        </div>
-      </div>
-      
-      <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
-        <div class="faq-question">
-          <span>Do you work with international clients?</span>
-          <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-          <p>Absolutely! We work with clients from all over the world including USA, UK, Canada, Australia, UAE, and many other countries. We're experienced in remote collaboration and can work in your timezone if needed. We accept payments in multiple currencies.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section>
-    <div class="contact-cta" data-aos="fade-up">
-      <h3>Ready to Start Your Project?</h3>
-      <p>Contact us now for a free consultation and let's discuss how we can bring your ideas to life.</p>
-      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a href="tel:+923157227688" class="cta-button" style="background: white; color: var(--contact-primary);">
-          <i class="fas fa-phone"></i> Call Now
-        </a>
-        <a href="https://wa.me/923157227688" target="_blank" class="cta-button" style="background: #25D366; color: white;">
-          <i class="fab fa-whatsapp"></i> WhatsApp
-        </a>
-        <a href="mailto:info@codecortexdigital.com" class="cta-button" style="background: white; color: var(--contact-primary);">
-          <i class="fas fa-envelope"></i> Email Us
-        </a>
-      </div>
-    </div>
-  </section>
+  </main>
 
   <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <div class="footer-column">
-        <h3>Code Cortex</h3>
-        <p>Building innovative digital solutions that drive business growth and transform user experiences.</p>
-        <div class="social-links">
-          <a href="https://www.facebook.com/codecortex" target="_blank"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://twitter.com/codecortex" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.linkedin.com/company/codecortex" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://github.com/codecortexdigital" target="_blank"><i class="fab fa-github"></i></a>
-        </div>
-      </div>
-      <div class="footer-column">
-        <h3>Quick Links</h3>
-        <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="careers.html">Careers</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h3>Services</h3>
-        <ul class="footer-links">
-          <li><a href="web-development.html">Web Development</a></li>
-          <li><a href="mobile-apps.html">Mobile Apps</a></li>
-          <li><a href="ai-solutions.html">AI Solutions</a></li>
-          <li><a href="maintenance.html">Maintenance & Support</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h3>Contact Information</h3>
-        <div class="contact-method">
-          <i class="fas fa-map-marker-alt"></i>
-          <div>
-            <p>Attock, Punjab, Pakistan</p>
-          </div>
-        </div>
-        <div class="contact-method">
-          <i class="fas fa-phone"></i>
-          <div>
-            <p>+92-315-722-7688</p>
-          </div>
-        </div>
-        <div class="contact-method">
-          <i class="fas fa-envelope"></i>
-          <div>
-            <p>info@codecortexdigital.com</p>
-          </div>
-        </div>
-        <div class="contact-method">
-          <i class="fas fa-clock"></i>
-          <div>
-            <p>Monday - Saturday: 9AM - 6PM</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 Code Cortex (Pvt.) Ltd. | All Rights Reserved</p>
-    </div>
-  </footer>
-
-  <!-- Floating Buttons -->
-  <div class="float-btn">
-    <a href="https://wa.me/923157227688" target="_blank" class="whatsapp">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-    <a href="#top" class="top">
-      <i class="fas fa-arrow-up"></i>
-    </a>
-  </div>
-
-  <!-- Theme Toggle -->
-  <button id="themeToggle">
-    <i class="fas fa-adjust"></i>
-  </button>
+  <div id="site-footer"></div>
 
   <!-- Scripts -->
+  <script src="js/include.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      AOS.init({
-        once: true,
-        duration: 800,
-        offset: 100
-      });
+  <script src="js/main.js"></script>
 
-      // Theme toggle
-      const themeBtn = document.getElementById('themeToggle');
-      const savedTheme = localStorage.getItem('theme') || 'dark';
-      
-      document.body.setAttribute('data-theme', savedTheme);
-      
-      themeBtn.addEventListener('click', () => {
-        const current = document.body.getAttribute('data-theme');
-        const newTheme = current === 'dark' ? 'light' : 'dark';
-        document.body.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-      });
-
-      // FAQ Toggle
-      const faqItems = document.querySelectorAll('.faq-item');
-      faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        question.addEventListener('click', () => {
-          item.classList.toggle('active');
-        });
-      });
-
-      // Contact Form Submission
-      const contactForm = document.getElementById('contactForm');
-      if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-          e.preventDefault();
-          
-          // Get form data
-          const name = document.getElementById('name').value;
-          const email = document.getElementById('email').value;
-          const service = document.getElementById('service').value;
-          const message = document.getElementById('message').value;
-          
-          // Create email subject and body
-          const subject = `New Contact Form Submission - ${service}`;
-          const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0AService: ${service}%0D%0AMessage: ${message}`;
-          
-          // Open default email client
-          window.location.href = `mailto:info@codecortexdigital.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-          
-          // Reset form
-          contactForm.reset();
-          
-          // Show success message
-          alert('Thank you for your message! Your default email client will open. Please send the email to complete your submission.');
-        });
-      }
-    });
-  </script>
 </body>
 </html>
