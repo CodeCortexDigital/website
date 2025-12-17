@@ -1,442 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Primary Meta Tags -->
-  <title>Our Services | Code Cortex - Software Development Services Pakistan</title>
-  <meta name="description" content="Complete software development services in Pakistan. Web development, mobile apps, AI solutions, and IT maintenance. End-to-end digital solutions for businesses.">
-  <meta name="keywords" content="software services Pakistan, web development services, mobile app services, AI solutions Pakistan, IT services, digital transformation">
-  <meta name="author" content="Code Cortex (SMC-Pvt.) Ltd.">
-  <link rel="canonical" href="https://codecortexdigital.github.io/com/services.html">
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Our Services | Code Cortex Digital Solutions</title>
+  <meta name="description" content="Explore Code Cortex services including web development, mobile apps, AI solutions, and ongoing maintenance & support." />
+  <meta name="keywords" content="web development services, mobile app development, AI solutions, software maintenance" />
+  <meta name="author" content="Code Cortex (Pvt.) Ltd." />
+  <meta name="robots" content="index, follow" />
+
   <!-- Open Graph -->
-  <meta property="og:title" content="Our Services | Code Cortex - Software Development Pakistan">
-  <meta property="og:description" content="Complete range of software development services including web, mobile, AI, and IT maintenance solutions.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://codecortexdigital.github.io/com/services.html">
-  <meta property="og:image" content="https://codecortexdigital.github.io/com/code_logo.png">
-  
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Our Services | Code Cortex">
-  <meta name="twitter:description" content="Software development services including web, mobile, AI, and IT solutions.">
-  
-  <!-- Load CSS Files -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-  <link rel="stylesheet" href="style.css">
-  
+  <meta property="og:title" content="Services | Code Cortex" />
+  <meta property="og:description" content="Professional web, mobile & AI development services." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/code_logo.png" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
   <!-- Favicon -->
-  <link rel="icon" href="code_logo.png" type="image/x-icon">
-  <link rel="apple-touch-icon" href="code_logo.png">
-
-  <style>
-    /* Services-specific styles */
-    .services-hero {
-      text-align: center;
-      padding: 6rem 2rem 4rem;
-      background: linear-gradient(135deg, var(--bg) 0%, #1a1c23 100%);
-      min-height: 60vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin-top: 80px;
-    }
-    
-    .services-hero h1 {
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      background: linear-gradient(90deg, var(--accent), var(--cta));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 1.5rem;
-      line-height: 1.2;
-    }
-    
-    .services-hero p {
-      font-size: clamp(1.1rem, 2vw, 1.3rem);
-      color: var(--muted);
-      margin-bottom: 2.5rem;
-      max-width: 700px;
-    }
-
-    /* Service Categories */
-    .service-categories {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-    
-    .service-category {
-      background: var(--panel);
-      border-radius: 15px;
-      overflow: hidden;
-      transition: all 0.3s ease;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .service-category:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-    }
-    
-    .service-header {
-      padding: 2rem;
-      text-align: center;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .service-header i {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      color: var(--cta);
-    }
-    
-    .service-features {
-      padding: 2rem;
-      flex-grow: 1;
-    }
-    
-    .service-features ul {
-      list-style: none;
-      text-align: left;
-    }
-    
-    .service-features li {
-      margin-bottom: 0.8rem;
-      padding-left: 1.5rem;
-      position: relative;
-    }
-    
-    .service-features li:before {
-      content: '✓';
-      position: absolute;
-      left: 0;
-      color: var(--accent);
-    }
-    
-    .service-link {
-      display: block;
-      text-align: center;
-      padding: 1rem;
-      background: var(--cta);
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.3s ease;
-      margin-top: auto;
-    }
-    
-    .service-link:hover {
-      background: #ff4b4b;
-    }
-
-    /* Process Section */
-    .process-steps {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    
-    .process-step {
-      flex: 1;
-      min-width: 250px;
-      text-align: center;
-      padding: 2rem;
-    }
-    
-    .step-number {
-      width: 60px;
-      height: 60px;
-      background: var(--cta);
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin: 0 auto 1rem;
-    }
-
-    /* Services CTA */
-    .services-cta {
-      background: linear-gradient(135deg, var(--cta) 0%, #ff8e8e 100%);
-      color: white;
-      padding: 4rem 2rem;
-      border-radius: 20px;
-      margin: 2rem auto;
-      max-width: 800px;
-    }
-    
-    .services-cta h3 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-  </style>
+  <link rel="icon" href="assets/code_logo.png" />
 </head>
+
 <body data-theme="dark">
 
+  <!-- Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- Header -->
-  <header>
-    <div class="header-left">
-      <a href="index.html" class="logo-link" aria-label="Code Cortex - Return to home page">
-        <img src="code_logo.png" alt="Code Cortex - Software Development Services" class="logo-img" width="55" height="55" />
-        <h1>Code Cortex</h1>
-      </a>
-    </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="about.html">About</a>
-      <a href="careers.html">Careers</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+  <div id="site-header"></div>
 
-  <!-- Hero Section -->
-  <section class="services-hero">
-    <h1 class="fade-in">Our Services</h1>
-    <p class="fade-in">Comprehensive software development solutions tailored to your business needs. We deliver innovative digital solutions that drive growth and efficiency.</p>
-  </section>
+  <!-- Main -->
+  <main id="main-content">
 
-  <!-- Services Categories -->
-  <section>
-    <h2>Our Core Services</h2>
-    <div class="service-categories">
-      <!-- Web Development -->
-      <div class="service-category" data-aos="fade-up">
-        <div class="service-header">
-          <i class="fas fa-laptop-code"></i>
+    <!-- HERO -->
+    <section class="hero small-hero" data-aos="fade-up">
+      <h2>Our Services</h2>
+      <p>
+        End-to-end digital solutions designed to help your business scale,
+        innovate, and succeed globally.
+      </p>
+    </section>
+
+    <!-- SERVICES GRID -->
+    <section data-aos="fade-up">
+      <h2>What We Offer</h2>
+
+      <div class="cards-container">
+
+        <div class="card">
+          <i class="fas fa-code"></i>
           <h3>Web Development</h3>
-          <p>Responsive websites & web applications</p>
+          <p>
+            High-performance websites and enterprise-grade web applications
+            built using modern technologies.
+          </p>
+          <a href="web-development.html" class="btn btn-primary">Explore</a>
         </div>
-        <div class="service-features">
-          <ul>
-            <li>Custom website development</li>
-            <li>E-commerce solutions</li>
-            <li>Web applications</li>
-            <li>SEO optimization</li>
-            <li>UI/UX design</li>
-            <li>API integration</li>
-          </ul>
-        </div>
-        <a href="web-development.html" class="service-link">Learn More →</a>
-      </div>
 
-      <!-- Mobile App Development -->
-      <div class="service-category" data-aos="fade-up" data-aos-delay="100">
-        <div class="service-header">
+        <div class="card">
           <i class="fas fa-mobile-alt"></i>
           <h3>Mobile App Development</h3>
-          <p>iOS, Android & cross-platform apps</p>
+          <p>
+            Scalable Android & iOS applications with clean UI, secure backend,
+            and smooth performance.
+          </p>
+          <a href="mobile-apps.html" class="btn btn-primary">Explore</a>
         </div>
-        <div class="service-features">
-          <ul>
-            <li>Native iOS & Android apps</li>
-            <li>Cross-platform development</li>
-            <li>UI/UX mobile design</li>
-            <li>App store deployment</li>
-            <li>API integration</li>
-            <li>Push notifications</li>
-          </ul>
-        </div>
-        <a href="mobile-apps.html" class="service-link">Learn More →</a>
-      </div>
 
-      <!-- AI Solutions -->
-      <div class="service-category" data-aos="fade-up" data-aos-delay="200">
-        <div class="service-header">
+        <div class="card">
           <i class="fas fa-brain"></i>
-          <h3>AI Solutions</h3>
-          <p>Intelligent automation & analytics</p>
+          <h3>AI & Automation</h3>
+          <p>
+            Intelligent systems, machine learning models, and automation tools
+            that drive smarter business decisions.
+          </p>
+          <a href="ai-solutions.html" class="btn btn-primary">Explore</a>
         </div>
-        <div class="service-features">
-          <ul>
-            <li>AI-powered chatbots</li>
-            <li>Predictive analytics</li>
-            <li>Machine learning models</li>
-            <li>Process automation</li>
-            <li>Computer vision</li>
-            <li>Natural language processing</li>
-          </ul>
-        </div>
-        <a href="ai-solutions.html" class="service-link">Learn More →</a>
-      </div>
 
-      <!-- Maintenance & Support -->
-      <div class="service-category" data-aos="fade-up" data-aos-delay="300">
-        <div class="service-header">
+        <div class="card">
           <i class="fas fa-headset"></i>
           <h3>Maintenance & Support</h3>
-          <p>24/7 technical support & updates</p>
+          <p>
+            Ongoing monitoring, updates, performance optimization, and
+            dedicated technical support.
+          </p>
+          <a href="maintenance.html" class="btn btn-primary">Explore</a>
         </div>
-        <div class="service-features">
-          <ul>
-            <li>Bug fixing & troubleshooting</li>
-            <li>Regular updates & upgrades</li>
-            <li>Server monitoring</li>
-            <li>24/7 technical support</li>
-            <li>Security maintenance</li>
-            <li>Performance optimization</li>
-          </ul>
+
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section data-aos="fade-up">
+      <h2>Why Choose Code Cortex?</h2>
+
+      <div class="cards-container">
+
+        <div class="card">
+          <i class="fas fa-rocket"></i>
+          <h3>Fast Delivery</h3>
+          <p>
+            Optimized development workflows ensuring faster turnaround without
+            compromising quality.
+          </p>
         </div>
-        <a href="maintenance.html" class="service-link">Learn More →</a>
-      </div>
-    </div>
-  </section>
 
-  <!-- Process -->
-  <section style="background: var(--panel);">
-    <h2>Our Working Process</h2>
-    <div class="process-steps">
-      <div class="process-step" data-aos="fade-up">
-        <div class="step-number">1</div>
-        <h3>Discovery & Planning</h3>
-        <p>We start by understanding your requirements, goals, and creating a detailed project plan.</p>
-      </div>
-      <div class="process-step" data-aos="fade-up" data-aos-delay="100">
-        <div class="step-number">2</div>
-        <h3>Design & Prototyping</h3>
-        <p>Create wireframes, prototypes, and designs that align with your brand and user needs.</p>
-      </div>
-      <div class="process-step" data-aos="fade-up" data-aos-delay="200">
-        <div class="step-number">3</div>
-        <h3>Development</h3>
-        <p>Build the solution using agile methodology with regular updates and quality assurance.</p>
-      </div>
-      <div class="process-step" data-aos="fade-up" data-aos-delay="300">
-        <div class="step-number">4</div>
-        <h3>Deployment & Support</h3>
-        <p>Testing, launch, and ongoing support to ensure your solution performs optimally.</p>
-      </div>
-    </div>
-  </section>
+        <div class="card">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Secure & Scalable</h3>
+          <p>
+            Security-first solutions built to scale with your business growth.
+          </p>
+        </div>
 
-  <!-- CTA Section -->
-  <section>
-    <div class="services-cta" data-aos="fade-up">
-      <h3>Ready to Transform Your Business?</h3>
-      <p>Let's discuss how our services can help you achieve your digital goals.</p>
-      <a href="contact.html" class="cta-button" style="background: white; color: var(--cta);">Get a Free Consultation</a>
-    </div>
-  </section>
+        <div class="card">
+          <i class="fas fa-users"></i>
+          <h3>Client-Focused</h3>
+          <p>
+            Transparent communication and close collaboration throughout the
+            project lifecycle.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="final-cta" data-aos="fade-up">
+      <h2>Let’s Build Something Powerful</h2>
+      <p>Tell us about your idea and get a free consultation.</p>
+
+      <a href="contact.html" class="btn-large">
+        Contact Us
+      </a>
+    </section>
+
+  </main>
 
   <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <div class="footer-column">
-        <h3>Code Cortex</h3>
-        <p>Building innovative digital solutions that drive business growth and transform user experiences.</p>
-        <div class="social-links">
-          <a href="https://www.facebook.com/codecortex" target="_blank"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://twitter.com/codecortex" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.linkedin.com/company/codecortex" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://github.com/codecortexdigital" target="_blank"><i class="fab fa-github"></i></a>
-        </div>
-      </div>
-      <div class="footer-column">
-        <h3>Quick Links</h3>
-        <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="careers.html">Careers</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h3>Services</h3>
-        <ul class="footer-links">
-          <li><a href="web-development.html">Web Development</a></li>
-          <li><a href="mobile-apps.html">Mobile Apps</a></li>
-          <li><a href="ai-solutions.html">AI Solutions</a></li>
-          <li><a href="maintenance.html">Maintenance & Support</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h3>Contact Information</h3>
-        <div class="contact-method">
-          <i class="fas fa-map-marker-alt"></i>
-          <div>
-            <p>Attock, Punjab, Pakistan</p>
-          </div>
-        </div>
-        <div class="contact-method">
-          <i class="fas fa-phone"></i>
-          <div>
-            <p>+92-315-722-7688</p>
-          </div>
-        </div>
-        <div class="contact-method">
-          <i class="fas fa-envelope"></i>
-          <div>
-            <p>info@codecortexdigital.com</p>
-          </div>
-        </div>
-        <div class="contact-method">
-          <i class="fas fa-clock"></i>
-          <div>
-            <p>Monday - Saturday: 9AM - 6PM</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 Code Cortex (Pvt.) Ltd. | All Rights Reserved</p>
-    </div>
-  </footer>
-
-  <!-- Floating Buttons -->
-  <div class="float-btn">
-    <a href="https://wa.me/923157227688" target="_blank" class="whatsapp">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-    <a href="#top" class="top">
-      <i class="fas fa-arrow-up"></i>
-    </a>
-  </div>
-
-  <!-- Theme Toggle -->
-  <button id="themeToggle">
-    <i class="fas fa-adjust"></i>
-  </button>
+  <div id="site-footer"></div>
 
   <!-- Scripts -->
+  <script src="js/include.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      AOS.init({
-        once: true,
-        duration: 800,
-        offset: 100
-      });
+  <script src="js/main.js"></script>
 
-      // Theme toggle
-      const themeBtn = document.getElementById('themeToggle');
-      const savedTheme = localStorage.getItem('theme') || 'dark';
-      
-      document.body.setAttribute('data-theme', savedTheme);
-      
-      themeBtn.addEventListener('click', () => {
-        const current = document.body.getAttribute('data-theme');
-        const newTheme = current === 'dark' ? 'light' : 'dark';
-        document.body.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-      });
-    });
-  </script>
 </body>
 </html>
