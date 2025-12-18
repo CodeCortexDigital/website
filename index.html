@@ -1,68 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- BASIC -->
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO -->
-  <title>Code Cortex | Software House in Pakistan | IT & AI Solutions</title>
-  <meta name="description" content="Code Cortex (SMC-Pvt.) Ltd. is a professional software house in Pakistan delivering web, mobile, AI & automation solutions globally." />
-  <meta name="keywords" content="software house Pakistan, web development, mobile apps, AI solutions, IT services" />
+  <title>Code Cortex | Software House in Pakistan | Web, Mobile & AI Solutions</title>
+  <meta name="description" content="Code Cortex is a professional software house in Pakistan delivering web development, mobile apps, AI solutions, automation, and custom software services globally." />
+  <meta name="keywords" content="
+  software house in Pakistan,
+  IT company Pakistan,
+  web development services,
+  mobile app development company,
+  AI solutions company,
+  artificial intelligence services,
+  custom software development,
+  enterprise software solutions,
+  startup software development,
+  business automation,
+  technology consulting Pakistan,
+  software house Attock,
+  IT services Pakistan
+  ">
+  <meta name="author" content="Code Cortex (SMC-Pvt.) Ltd." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.codecortexdigital.com/" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Code Cortex | Software House in Pakistan">
-  <meta property="og:description" content="Web, Mobile & AI Solutions by Code Cortex">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.codecortexdigital.com/">
-  <meta property="og:image" content="./code_logo.png">
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="Code Cortex | Software House in Pakistan" />
+  <meta property="og:description" content="Web, Mobile & AI Solutions by Code Cortex" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.codecortexdigital.com/" />
+  <meta property="og:image" content="./code_logo.png" />
 
-  <!-- Icons & Fonts -->
-  <link rel="icon" href="./code_logo.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <!-- ICONS -->
+  <link rel="icon" href="./code_logo.png" type="image/png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
 
-  <!-- Google Site Verification -->
-  <!-- PLACE YOUR GOOGLE VERIFICATION META TAG HERE -->
+  <!-- STRUCTURED DATA -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Code Cortex (SMC-Pvt.) Ltd.",
+    "url":"https://www.codecortexdigital.com/",
+    "logo":"https://www.codecortexdigital.com/code_logo.png",
+    "contactPoint":[{
+      "@type":"ContactPoint",
+      "telephone":"+92-315-722-7688",
+      "contactType":"customer service",
+      "areaServed":"PK"
+    }]
+  }
+  </script>
 
   <style>
     :root{
-      --bg:#1c1e26; --panel:#2f3243; --accent:#ffe27d; --muted:#cfcfcf; --cta:#ff6b6b;
+      --bg:#1c1e26;
+      --panel:#2f3243;
+      --accent:#ffe27d;
+      --muted:#cfcfcf;
+      --cta:#ff6b6b;
     }
+
     *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
-    body{font-family:Segoe UI,sans-serif;background:var(--bg);color:var(--muted);line-height:1.6}
+    body{
+      font-family:Segoe UI,system-ui,sans-serif;
+      background:var(--bg);
+      color:var(--muted);
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
 
-    header{position:fixed;top:0;width:100%;background:#2b2e3d;padding:1rem 2rem;
-      display:flex;justify-content:space-between;align-items:center;z-index:999;box-shadow:0 4px 10px rgba(0,0,0,.4)}
-    .header-left{display:flex;align-items:center;gap:15px}
-    .logo-img{width:52px;height:52px;border-radius:50%;border:2px solid var(--accent)}
-    nav a{color:#fff;text-decoration:none;font-weight:600;margin:0 8px}
+    /* HEADER */
+    header{
+      position:fixed;
+      top:0;
+      width:100%;
+      background:#2b2e3d;
+      padding:1rem 2rem;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      z-index:999;
+      box-shadow:0 4px 10px rgba(0,0,0,.4);
+      backdrop-filter:blur(6px);
+    }
+    .header-left{display:flex;align-items:center;gap:14px}
+    .logo-img{width:50px;height:50px;border-radius:50%;border:2px solid var(--accent)}
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      font-size:0.92rem;
+      letter-spacing:.4px;
+      text-transform:uppercase;
+      margin:0 8px;
+      font-weight:600;
+    }
     nav a:hover{color:var(--accent)}
-    .login-btn{background:var(--accent);border:none;padding:8px 16px;border-radius:6px;font-weight:700;cursor:pointer}
+    .login-btn{
+      background:var(--accent);
+      border:none;
+      padding:8px 16px;
+      border-radius:4px;
+      font-size:.85rem;
+      font-weight:700;
+      cursor:pointer;
+    }
 
-    section{padding:5rem 2rem;text-align:center}
-    h2{color:var(--accent);margin-bottom:1.5rem;font-size:2.2rem}
-    .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center}
-    .hero h2{font-size:3rem;background:linear-gradient(90deg,var(--accent),var(--cta));
-      -webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    /* SECTIONS */
+    section{
+      padding:5.5rem 2rem;
+      text-align:center;
+      scroll-margin-top:90px;
+    }
+    h1,h2,h3{font-weight:600}
+    h2{color:var(--accent);font-size:2.2rem;margin-bottom:1.5rem}
 
-    .cta-btn{background:var(--cta);border:none;color:#fff;padding:14px 30px;
-      border-radius:30px;font-size:1rem;cursor:pointer}
-    .cta-btn:hover{background:#ff4b4b}
+    /* HERO */
+    .hero{
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      padding-top:6rem;
+    }
+    .hero h2{
+      font-size:3rem;
+      line-height:1.15;
+      background:linear-gradient(90deg,var(--accent),var(--cta));
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+    .hero p{
+      max-width:640px;
+      margin:1rem auto 2rem;
+      font-size:1.05rem;
+      opacity:.9;
+    }
 
-    .cards{display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem}
-    .card{background:var(--panel);padding:1.6rem;border-radius:12px;width:280px;
-      box-shadow:0 6px 20px rgba(0,0,0,.45);transition:.3s}
+    /* CTA */
+    .cta-btn{
+      background:var(--cta);
+      color:#fff;
+      border:none;
+      padding:10px 22px;
+      border-radius:6px;
+      font-size:.95rem;
+      font-weight:600;
+      cursor:pointer;
+      transition:.25s ease;
+    }
+    .cta-btn:hover{background:#ff4b4b;transform:translateY(-1px)}
+
+    /* CARDS */
+    .cards{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:1.5rem;
+    }
+    .card{
+      background:var(--panel);
+      padding:1.6rem;
+      border-radius:12px;
+      width:280px;
+      box-shadow:0 6px 20px rgba(0,0,0,.45);
+      transition:.3s;
+      will-change:transform;
+    }
     .card:hover{transform:translateY(-6px)}
     .card i{font-size:2rem;color:var(--cta);margin-bottom:1rem}
+    .card h3{font-size:1.05rem;margin-bottom:.6rem}
+    .card p{font-size:.95rem;opacity:.9}
 
-    footer{background:#2b2e3d;padding:2rem;text-align:center;margin-top:3rem}
+    /* FOOTER */
+    footer{
+      background:#2b2e3d;
+      padding:2rem;
+      text-align:center;
+      font-size:.85rem;
+      letter-spacing:.3px;
+      margin-top:3rem;
+    }
 
-    .float-btn{position:fixed;right:20px;bottom:20px;display:flex;flex-direction:column;gap:12px;z-index:999}
-    .float-btn a{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;
-      justify-content:center;color:#fff;font-size:20px}
+    /* FLOAT BUTTONS */
+    .float-btn{
+      position:fixed;
+      right:20px;
+      bottom:20px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      z-index:999;
+    }
+    .float-btn a{
+      width:48px;
+      height:48px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-size:20px;
+      opacity:.95;
+      transition:.25s;
+    }
+    .float-btn a:hover{opacity:1;transform:translateY(-2px)}
     .whatsapp{background:#25D366}
     .top{background:var(--cta)}
   </style>
@@ -72,7 +222,7 @@
 
 <header>
   <div class="header-left">
-    <img src="./code_logo.png" class="logo-img" alt="Code Cortex Logo">
+    <img src="./code_logo.png" alt="Code Cortex Logo" class="logo-img">
     <h1>Code Cortex</h1>
   </div>
   <nav>
@@ -86,9 +236,15 @@
   <button class="login-btn">Admin</button>
 </header>
 
+<main>
+
 <section class="hero" id="hero">
   <h2>Innovating Ideas. Building Technology.</h2>
-  <p>We build scalable web, mobile & AI solutions for modern businesses.</p>
+  <p>
+    We design and develop scalable <strong>web applications</strong>,
+    <strong>mobile apps</strong>, and <strong>AI-powered software solutions</strong>
+    for startups, enterprises, and growing businesses worldwide.
+  </p>
   <button class="cta-btn" onclick="document.getElementById('contact').scrollIntoView()">Get in Touch</button>
 </section>
 
@@ -105,23 +261,23 @@
 <section id="about">
   <h2>About Us</h2>
   <p style="max-width:800px;margin:auto">
-    Code Cortex is a Pakistan-based software company delivering reliable,
-    scalable digital solutions globally.
+    Code Cortex is a professional software house in Pakistan delivering reliable,
+    scalable digital solutions to clients across the globe.
   </p>
 </section>
 
 <section id="portfolio">
   <h2>Portfolio</h2>
   <div class="cards">
-    <div class="card"><h3>Business Website</h3><p>SEO-optimized corporate site.</p></div>
-    <div class="card"><h3>Mobile App</h3><p>E-commerce application.</p></div>
-    <div class="card"><h3>AI System</h3><p>Recommendation engine.</p></div>
+    <div class="card"><h3>Business Website</h3><p>SEO-optimized corporate platform.</p></div>
+    <div class="card"><h3>Mobile Application</h3><p>Modern e-commerce solution.</p></div>
+    <div class="card"><h3>AI System</h3><p>Intelligent recommendation engine.</p></div>
   </div>
 </section>
 
 <section id="careers">
   <h2>Careers</h2>
-  <p>Join our growing tech team.</p>
+  <p>Join our growing technology team.</p>
   <a class="cta-btn" href="mailto:info@codecortexdigital.com?subject=Career Application">Apply Now</a>
 </section>
 
@@ -130,16 +286,29 @@
   <p>Email: info@codecortexdigital.com<br>Phone: +92 315 722 7688</p>
 </section>
 
+<!-- SEO HIDDEN SUPPORT -->
+<section style="display:none">
+  <h2>Software Development Services in Pakistan</h2>
+  <p>
+    Code Cortex is a leading software house in Pakistan offering web development,
+    mobile app development, artificial intelligence, automation solutions,
+    and enterprise software services.
+  </p>
+</section>
+
+</main>
+
 <footer>
-  © 2025 Code Cortex | All Rights Reserved
+  © 2025 Code Cortex (SMC-Pvt.) Ltd. | All Rights Reserved
 </footer>
 
 <div class="float-btn">
-  <a href="https://wa.me/923157227688" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+  <a href="https://wa.me/923157227688" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
   <a href="#hero" class="top"><i class="fas fa-arrow-up"></i></a>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script>AOS.init();</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+<script>AOS.init({once:false,offset:100,duration:900});</script>
+
 </body>
 </html>
