@@ -1,128 +1,39 @@
-/* =================================================
-   CODE CORTEX – MAIN JS
-   Extracted from reference page
-   Handles:
-   - AOS
-   - Loading bar
-   - Hero text animation
-   - Mobile navigation
-   - Theme toggle
-   - Header hide/show on scroll
-================================================== */
-
 document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.getElementById("navToggle");
-  const menu = document.getElementById("navMenu");
 
-  if (toggle && menu) {
-    toggle.addEventListener("click", () => {
-      menu.classList.toggle("show");
-    });
-  }
-});
+  // Wait until header is injected
+  const waitForHeader = setInterval(() => {
+    const navToggle = document.getElementById("navToggle");
+    const navMenu = document.getElementById("navMenu");
 
-  /* ---------- LOADING BAR ---------- */
-  const loadingBar = document.getElementById('loadingBar');
-  if (loadingBar) {
-    let width = 0;
-    const interval = setInterval(() => {
-      if (width >= 100) {
-        clearInterval(interval);
-        loadingBar.style.opacity = '0';
-        setTimeout(() => loadingBar.remove(), 300);
-      } else {
-        width += 25;
-        loadingBar.style.width = width + '%';
-      }
-    }, 200);
-  }
+    if (navToggle && navMenu) {
+      clearInterval(waitForHeader);
 
-  /* ---------- HERO TEXT ROTATION ---------- */
-  const animatedText = document.getElementById('animatedText');
-  if (animatedText) {
-    const lines = [
-      "Your Strategic Development Partner for USA & UAE Markets",
-      "Elite Engineering Talent at 60% Cost Savings",
-      "40% Faster Delivery with Dedicated Teams",
-      "Trusted by Companies Worldwide"
-    ];
-    let index = 0;
+      // Toggle menu
+      navToggle.addEventListener("click", (e) => {
+        e.stopPropagation();
+        navMenu.classList.toggle("show");
 
-    setInterval(() => {
-      animatedText.style.opacity = '0';
-      setTimeout(() => {
-        animatedText.textContent = lines[index];
-        animatedText.style.opacity = '1';
-        index = (index + 1) % lines.length;
-      }, 500);
-    }, 4000);
-  }
-
-  /* ---------- MOBILE NAVIGATION ---------- */
-  const navToggle = document.getElementById('navToggle');
-  const navMenu = document.getElementById('navMenu');
-
-  if (navToggle && navMenu) {
-    navToggle.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-      navToggle.setAttribute('aria-expanded', String(!expanded));
-      navMenu.classList.toggle('show');
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
-        navToggle.setAttribute('aria-expanded', 'false');
-        navMenu.classList.remove('show');
-      }
-    });
-
-    navMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navToggle.setAttribute('aria-expanded', 'false');
-        navMenu.classList.remove('show');
+        const expanded =
+          navToggle.getAttribute("aria-expanded") === "true" || false;
+        navToggle.setAttribute("aria-expanded", !expanded);
       });
-    });
-  }
 
-  /* ---------- THEME TOGGLE ---------- */
-  const themeToggle = document.getElementById('themeToggle');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const savedTheme = localStorage.getItem('theme') || (prefersDark ? 'dark' : 'light');
+      // Close menu on link click
+      navMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navMenu.classList.remove("show");
+          navToggle.setAttribute("aria-expanded", "false");
+        });
+      });
 
-  document.body.setAttribute('data-theme', savedTheme);
-
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-      const currentTheme = document.body.getAttribute('data-theme');
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      document.body.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-    });
-  }
-
-  /* ---------- HEADER HIDE / SHOW ON SCROLL ---------- */
-  const header = document.getElementById('mainHeader');
-  let lastScrollY = window.scrollY;
-
-  if (header) {
-    window.addEventListener('scroll', () => {
-      const currentScroll = window.scrollY;
-
-      if (currentScroll > lastScrollY && currentScroll > 100) {
-        header.style.transform = 'translateY(-100%)';
-      } else {
-        header.style.transform = 'translateY(0)';
-      }
-
-      lastScrollY = currentScroll;
-    });
-  }
+      // Close menu when clicking outside
+      document.addEventListener("click", (e) => {
+        if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+          navMenu.classList.remove("show");
+          navToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+    }
+  }, 50);
 
 });
-
-/* ---------- GLOBAL ERROR LOGGING ---------- */
-window.addEventListener('error', (e) => {
-  console.error('Runtime error:', e.error || e.message);
-});
-
