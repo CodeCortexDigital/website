@@ -85,6 +85,84 @@
       --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
 
+    /* Light Theme Variables */
+    body.light-theme {
+      --primary-dark: #f8fafc;
+      --secondary-dark: #e2e8f0;
+      --accent-gold: #d97706;
+      --accent-red: #dc2626;
+      --text-light: #0f172a;
+      --text-muted: #475569;
+      --success: #059669;
+      --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Light Theme Specific Styles */
+    body.light-theme header {
+      background: rgba(248, 250, 252, 0.95);
+      border-bottom: 1px solid rgba(15, 23, 42, 0.1);
+    }
+
+    body.light-theme .logo {
+      border-color: var(--accent-gold);
+    }
+
+    body.light-theme .nav-link {
+      color: var(--text-light);
+    }
+
+    body.light-theme .nav-link:hover {
+      color: var(--accent-gold);
+    }
+
+    body.light-theme .nav-link::after {
+      background: var(--accent-gold);
+    }
+
+    body.light-theme .card {
+      border: 1px solid rgba(15, 23, 42, 0.1);
+    }
+
+    body.light-theme .card:hover {
+      border-color: var(--accent-gold);
+    }
+
+    body.light-theme .portfolio-item {
+      border: 1px solid rgba(15, 23, 42, 0.1);
+    }
+
+    body.light-theme .job-item {
+      border-bottom: 1px solid rgba(15, 23, 42, 0.1);
+    }
+
+    body.light-theme .form-control {
+      background: white;
+      border: 1px solid rgba(15, 23, 42, 0.2);
+      color: var(--text-light);
+    }
+
+    body.light-theme .form-control:focus {
+      border-color: var(--accent-gold);
+    }
+
+    body.light-theme footer {
+      border-top: 1px solid rgba(15, 23, 42, 0.1);
+    }
+
+    body.light-theme .footer-bottom {
+      border-top: 1px solid rgba(15, 23, 42, 0.1);
+    }
+
+    body.light-theme .certification-section {
+      background: rgba(15, 23, 42, 0.03);
+      border: 1px solid rgba(15, 23, 42, 0.05);
+    }
+
+    body.light-theme .modal-content {
+      border: 1px solid rgba(15, 23, 42, 0.1);
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -102,6 +180,7 @@
       color: var(--text-light);
       line-height: 1.7;
       overflow-x: hidden;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     /* Header */
@@ -599,6 +678,8 @@
       text-decoration: none;
       transition: var(--transition);
       box-shadow: var(--shadow-md);
+      border: none;
+      cursor: pointer;
     }
 
     .float-btn.whatsapp {
@@ -609,8 +690,49 @@
       background: linear-gradient(135deg, var(--accent-red), #dc2626);
     }
 
+    .float-btn.theme {
+      background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+      position: fixed;
+      left: 2rem;
+      bottom: 2rem;
+      right: auto;
+    }
+
     .float-btn:hover {
       transform: translateY(-3px) scale(1.1);
+    }
+
+    /* Theme Toggle Switch */
+    .theme-switch {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: var(--shadow-md);
+      position: fixed;
+      left: 2rem;
+      bottom: 2rem;
+      z-index: 1000;
+    }
+
+    .theme-switch:hover {
+      transform: translateY(-3px) scale(1.1);
+    }
+
+    .theme-switch i {
+      font-size: 1.25rem;
+      transition: transform 0.3s ease;
+    }
+
+    body.light-theme .theme-switch i {
+      transform: rotate(180deg);
     }
 
     /* Modal */
@@ -705,6 +827,11 @@
 
       .float-buttons {
         right: 1rem;
+        bottom: 1rem;
+      }
+
+      .theme-switch {
+        left: 1rem;
         bottom: 1rem;
       }
 
@@ -970,7 +1097,9 @@
     </div>
     
     <div class="careers-list">
-      
+      <!-- Job listings will be dynamically populated -->
+    </div>
+    
     <div style="text-align: center; margin-top: 3rem;">
       <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto 2rem;">
         Don't see a perfect match? We're always looking for talented individuals. 
@@ -1163,11 +1292,6 @@
       <div class="certification-logo">
         <img src="assets/cdc_logo.png" alt="Central Depository Company">
       </div>
-      
-      <!-- Add more logos if you have -->
-      <!-- <div class="certification-logo">
-        <img src="assets/other_logo.png" alt="Other Certification">
-      </div> -->
     </div>
     <p style="color: var(--text-muted); margin-top: 1.5rem; font-size: 0.9rem;">
       Fully compliant and registered with all regulatory authorities
@@ -1179,6 +1303,7 @@
   </div>
 </footer>
 
+<!-- Floating Action Buttons -->
 <div class="float-buttons">
   <a href="https://wa.me/923157227688" target="_blank" class="float-btn whatsapp">
     <i class="fab fa-whatsapp"></i>
@@ -1187,6 +1312,11 @@
     <i class="fas fa-arrow-up"></i>
   </a>
 </div>
+
+<!-- Theme Toggle Button -->
+<button class="theme-switch" id="themeToggle" aria-label="Toggle theme">
+  <i class="fas fa-moon"></i>
+</button>
 
 <!-- Admin Modal -->
 <div class="modal" id="adminModal">
@@ -1210,6 +1340,37 @@
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
   const mainNav = document.getElementById('mainNav');
   const contactForm = document.getElementById('contactForm');
+  const themeToggle = document.getElementById('themeToggle');
+  
+  // Theme Toggle Functionality
+  function initTheme() {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.body.classList.toggle('light-theme', savedTheme === 'light');
+    updateThemeIcon(savedTheme);
+  }
+  
+  function toggleTheme() {
+    const isLightTheme = document.body.classList.toggle('light-theme');
+    const theme = isLightTheme ? 'light' : 'dark';
+    localStorage.setItem('theme', theme);
+    updateThemeIcon(theme);
+    showNotification(`Switched to ${theme} theme`);
+  }
+  
+  function updateThemeIcon(theme) {
+    const icon = themeToggle.querySelector('i');
+    if (theme === 'light') {
+      icon.className = 'fas fa-sun';
+    } else {
+      icon.className = 'fas fa-moon';
+    }
+  }
+  
+  // Initialize theme on page load
+  document.addEventListener('DOMContentLoaded', initTheme);
+  
+  // Theme toggle event listener
+  themeToggle.addEventListener('click', toggleTheme);
   
   // Mobile Menu Toggle
   mobileMenuBtn.addEventListener('click', () => {
@@ -1232,10 +1393,14 @@
     const header = document.querySelector('header');
     if (window.scrollY > 100) {
       header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';
-      header.style.background = 'rgba(15, 23, 42, 0.98)';
+      header.style.background = document.body.classList.contains('light-theme') 
+        ? 'rgba(248, 250, 252, 0.98)' 
+        : 'rgba(15, 23, 42, 0.98)';
     } else {
       header.style.boxShadow = 'none';
-      header.style.background = 'rgba(15, 23, 42, 0.95)';
+      header.style.background = document.body.classList.contains('light-theme')
+        ? 'rgba(248, 250, 252, 0.95)'
+        : 'rgba(15, 23, 42, 0.95)';
     }
   });
   
@@ -1361,4 +1526,3 @@
 
 </body>
 </html>
-
